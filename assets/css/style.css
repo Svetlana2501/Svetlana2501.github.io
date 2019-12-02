@@ -1,0 +1,405 @@
+@import "refactoring.css";
+/*============   ШРИФТЫ    ===========*/
+@font-face {
+  font-family: Lato-Bold;
+  src: url('../fonts/Lato-Bold.ttf');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: Lato-Heavy;
+  src: url('../fonts/Lato-Heavy.ttf');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: Lato-Regular;
+  src: url('../fonts/Lato-Regular.ttf');
+  font-weight: medium;
+  font-style: normal;
+}
+@font-face {
+  font-family: Lato-Medium;
+  src: url('../fonts/Lato-Medium.ttf');
+  font-weight: medium;
+  font-style: normal;
+}
+/*============  ГЛАВНЫЙ ЭКРАН  ===========*/
+html,
+body {
+  color: #696969;
+  height: 100%;
+  font-family: Lato-Regular;
+}
+header {
+  background-color: #C0C0C0 !important;
+  color: #FF3D00;
+  border: 0 !important;
+}
+header .header-text {
+  padding-top: 10px;
+}
+header .header-text h1 {
+  margin: 0 !important;
+  font-family: Lato-Medium;
+  font-size: 15pt;
+  text-transform: uppercase;
+}
+header .header-text p {
+  color: #ffffff;
+  font-family: Lato-Regular;
+  text-transform: uppercase;
+  font-size: 8pt;
+}
+header a {
+  background: 0 !important;
+  color: inherit !important;
+}
+header.navbar {
+  border-radius: 0;
+}
+header.navbar .nav > li > a {
+  color: #ffffff !important;
+  font-family: Lato-Regular;
+  text-transform: uppercase;
+}
+header.navbar .dropdown > a:hover,
+header.navbar .dropdown > a:focus,
+header.navbar .active a:hover,
+header.navbar .active a:focus {
+  color: #FF3D00 !important;
+  cursor: pointer;
+}
+header .dropdown-menu {
+  background-color: #ffffff !important;
+}
+header .dropdown-menu > li > a {
+  background: 0 !important;
+  font-family: Lato-Regular;
+  color: #FF3D00 !important;
+}
+header .dropdown-menu > li > a:hover,
+header .dropdown-menu > li > a:focus {
+  text-decoration: underline;
+  color: #FF3D00 !important;
+}
+.logo {
+  height: 45px;
+  margin: 10px 5px;
+}
+.content .row {
+  margin: 0;
+  width: 100%;
+}
+footer {
+  color: #FF3D00;
+  width: 100%;
+  padding: 30px 0;
+  background-color: #C0C0C0;
+  font-family: Lato-Regular;
+  font-size: 20px;
+
+}
+footer .soc-icon {
+  font-size: 25px;
+  padding: 5px;
+  border: 2px solid white;
+  margin: 5px;
+  border-radius: 10px;
+  color: white !important;
+}
+h1,
+h2 {
+  font-family: Lato-Medium;
+}
+.highlight1 {
+  border-bottom: 1px solid #FF3D00;
+}
+.highlight {
+  border-bottom: 6px solid #FF3D00;
+}
+/*============      EDU     ============*/
+.edu-header {
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 230px;
+}
+.edu-header img {
+  margin-top: 60px;
+}
+@media (min-width: 768px) and (min-width: 480px) {
+  .edu-header img {
+    margin-left: 40px;
+  }
+}
+.edu-block {
+  padding: 0 5px;
+}
+.edu-block .contain {
+  padding: 10px;
+  border-radius: 5px;
+  margin: 15px 0;
+  box-shadow: 0px 0px 14px -1px #C0C0C0;
+  font-size: 18px;
+  overflow: hidden;
+}
+/*============      DOCS    ============*/
+.doc-container {
+  border-bottom: 2px solid #C0C0C0;
+  font-size: 20px;
+  padding-bottom: 5px;
+}
+.doc-container > i {
+  display: inline-block;
+  margin-left: 5px;
+  margin-right: 30px;
+}
+.doc-container > div {
+  font-size: 15px;
+}
+.doc-container > div > .info {
+  width: 60%;
+}
+@media (min-width: 768px) {
+  .doc-container > div > .info {
+    margin-left: 50px;
+  }
+}
+/*============      NEWS    ============*/
+.news-panel {
+  background-color: #C0C0C0;
+  font-family: Lato-Bold;
+  height: 400px;
+}
+.news-panel > div {
+  overflow: hidden;
+  height: 100px;
+  padding: 10px 20px;
+  border-bottom: 1px solid #696969;
+  cursor: pointer;
+}
+.news-panel > div > h3 {
+  font-size: 17px;
+  color: white;
+  margin: 4px 0;
+}
+.news-panel > div > p {
+  font-size: 12px;
+  margin: 0;
+  color: #1db0ef;
+}
+.news-panel > div.active {
+  background-color: #1db0ef;
+}
+.news-panel > div.active::after {
+  content: '';
+  position: absolute;
+  /* Абсолютное позиционирование */
+  left: -30px;
+  /* Положение треугольника */
+  margin-top: -50px;
+  border: 15px solid transparent;
+  /* Прозрачные границы */
+  border-right: 15px solid #1db0ef;
+  /* Добавляем треугольник */
+}
+.news-panel > div.active > p {
+  color: #04264a;
+}
+.news-content {
+  background-position: center left;
+  background-size: 1000px auto;
+  height: 400px;
+}
+.news-content > div {
+  overflow: hidden;
+  margin-top: 270px;
+}
+.news-content > div > a > h3 {
+  display: inline-block;
+  border-left: 5px solid #1db0ef;
+  background-color: #04264a;
+  color: white;
+  padding: 13px 15px;
+  margin: 2px 0;
+}
+.news-content > div > p {
+  display: inline-block;
+  border-left: 5px solid #1db0ef;
+  background-color: #04264a;
+  color: grey;
+  padding: 5px 15px;
+  margin: 2px 0;
+}
+.news-content > div > h5 {
+  display: inline-block;
+  color: white;
+  background-color: #1db0ef;
+  margin: 2px 0;
+  padding: 5px;
+}
+.news-alllink {
+  margin: 2px 0;
+  float: right;
+  background-color: #ff3d00cc;
+  color: white;
+  padding: 5px 15px;
+  border-radius: 0 0 20px 20px;
+}
+.news-alllink:hover {
+  color: white;
+}
+/*============    Rating    ===========*/
+.rating-block {
+  border-bottom: 1px solid grey;
+  font-family: Lato-Bold;
+}
+.rating-block .rat-cup {
+  padding: 5px;
+}
+.rating-block .rat-logo {
+  padding: 5px;
+  width: 60px;
+}
+@media (max-width: 768px) {
+  .rating-block .rat-logo {
+    width: 40px;
+  }
+}
+.rating-block .rat-place {
+  display: inline-block;
+  width: 60px;
+  padding: 5px 0px;
+  text-align: center;
+}
+.rating-block .rat-uni {
+  text-decoration: none;
+  color: #818181;
+  padding: 20px 20px;
+  position: absolute;
+}
+.rating-block .rat-uni.full {
+  padding: 5px;
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+}
+@media (max-width: 768px) {
+  .rating-block .rat-uni.full {
+    font-size: 10px;
+    max-width: 120px;
+  }
+}
+.rating-block .rat-result {
+  padding: 5px;
+}
+@media (max-width: 768px) {
+  .rating-block .rat-result {
+    font-size: 10px;
+  }
+}
+.rating-block .rat-boat {
+  width: 100px;
+  position: absolute;
+  content: '';
+  margin-top: 51px;
+}
+.rating-block .rat-rat {
+  display: inline-block;
+  vertical-align: middle;
+}
+/*============    Шрифты    ===========*/
+/*============    Подвал    ===========*/
+/*============    Всплывающие окна   ===========*/
+/*============    Адаптив   ===========*/
+/*============    	sidebar    ===========*/
+.sidebar-custom {
+  background: #04264A;
+  /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(#04264A, #1DB0EF);
+  /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#04264A, #1DB0EF);
+  /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#04264A, #1DB0EF);
+  /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#04264A, #1DB0EF);
+  /* Standard syntax */
+  padding: 0px;
+  font-family: Lato-Regular;
+}
+@media (min-width: 768px) {
+  .sidebar-custom {
+    min-height: 100%;
+    border-bottom-right-radius: 10px;
+  }
+}
+.sidebar-custom .list {
+  color: #fff;
+  list-style: none;
+  padding-left: 0px;
+}
+.sidebar-custom .list::first-line {
+  color: rgba(255, 255, 255, 0.5);
+}
+.sidebar-custom .list > h5 {
+  color: grey;
+  text-transform: uppercase;
+}
+.sidebar-custom .list > li > a {
+  color: white;
+}
+.sidebar-custom .list > li,
+.sidebar-custom .list h5 {
+  padding: 5px 0px 5px 40px;
+}
+.sidebar-custom .list > li:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-left: 5px solid white;
+  color: white;
+  font-weight: bolder;
+  padding-left: 35px;
+}
+.main-content {
+  padding: 20px;
+}
+/*============    	DROPZONE    ===========*/
+#personimg img {
+  max-width: 100%;
+  margin: 10px;
+}
+.stud-photo img {
+  max-width: 100%;
+}
+/*============    	sample    ===========*/
+.jumbotron-inverse {
+  background-color: inherit;
+  border: 4px solid white;
+}
+.modal-inverse .close {
+  color: white;
+}
+.modal-inverse .modal-content {
+  border: 2px solid white;
+  background-color: #04264a;
+}
+.no-padding {
+  padding: 0 !important;
+}
+.no-margin {
+  margin: 0 !important;
+}
+.block-margin {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.block-grz-margin {
+  margin-right: 20px;
+  margin-left: 20px;
+}
+.block-padding {
+  padding: 10px;
+}
+.btn-margin {
+  margin: 5px;
+}
+/*============  Foto   ===========*/
